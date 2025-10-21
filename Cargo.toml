@@ -1,0 +1,22 @@
+[package]
+name = "rustydb"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# For parsing SQL queries
+sqlparser = "0.53"
+# For serialization/deserialization of data structures
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# For command-line interface
+clap = { version = "4.5", features = ["derive"] }
+# For error handling
+anyhow = "1.0"
+thiserror = "2.0"
+# For hashing (used in sharding)
+seahash = "4.1"
+
+[[bin]]
+name = "rustydb"
+path = "src/main.rs"
